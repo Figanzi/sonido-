@@ -65,7 +65,7 @@ function initScrollAnimations() {
 /* ── 4. FORMULARIO → WHATSAPP ──────────────────────────────── */
 const WA_NUMBER = '56946541095';
 
-function buildWhatsAppMessage({ nombre, telefono, email, fecha, horario, personas, tipo, mensaje }) {
+function buildWhatsAppMessage({ nombre, telefono, email, fecha, horario, personas, direccion, tipo, mensaje }) {
   const fechaFormateada = fecha
     ? new Date(fecha + 'T12:00:00').toLocaleDateString('es-CL', {
         weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
@@ -81,6 +81,7 @@ function buildWhatsAppMessage({ nombre, telefono, email, fecha, horario, persona
     `*Fecha del evento:* ${fechaFormateada}`,
     `*Horario:* ${horario}`,
     `*Cantidad de personas:* ${personas}`,
+    `*Dirección del evento:* ${direccion}`,
     `*Tipo de evento:* ${tipo}`,
     `*Detalles:* ${mensaje || 'Sin detalles adicionales'}`,
   ]
@@ -110,7 +111,8 @@ function clearErrors() {
 
 function validateForm(data) {
   const errors = [];
-  if (!data.nombre)   { errors.push('nombre');   showError('nombre'); }
+  if (!data.nombre)     { errors.push('nombre');     showError('nombre'); }
+  if (!data.direccion) { errors.push('direccion'); showError('direccion'); }
   if (!data.telefono) { errors.push('telefono'); showError('telefono'); }
   if (!data.fecha)    { errors.push('fecha');    showError('fecha'); }
   if (!data.horario)  { errors.push('horario');  showError('horario'); }
@@ -131,6 +133,7 @@ function enviarConsulta() {
     personas: document.getElementById('personas')?.value        || '',
     tipo:     document.getElementById('tipo')?.value            || '',
     mensaje:  document.getElementById('mensaje')?.value.trim()  || '',
+    direccion: document.getElementById('direccion')?.value.trim() || '',
   };
 
   const errors = validateForm(data);
