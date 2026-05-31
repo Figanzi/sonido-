@@ -1,0 +1,88 @@
+{
+  "name": "Figanzi Sonidos",
+  "short_name": "Figanzi",
+  "description": "Sonido, iluminación y efectos especiales para todo tipo de eventos. Consultá sin compromiso.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#D1000A",
+  "orientation": "portrait-primary",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Página principal de Figanzi Sonidos"
+    },
+    {
+      "src": "screenshots/mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Vista móvil de Figanzi Sonidos"
+    }
+  ],
+  "categories": ["entertainment", "music", "business"],
+  "shortcuts": [
+    {
+      "name": "Consultar por WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "Abrí WhatsApp directo con Figanzi Sonidos",
+      "url": "https://wa.me/56946541095?text=Hola!%20Quiero%20consultar%20disponibilidad%20para%20un%20evento%20%F0%9F%8E%89",
+      "icons": [{ "src": "icons/shortcut-wa.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Hacer una consulta",
+      "short_name": "Consulta",
+      "description": "Ir al formulario de reservas",
+      "url": "/index.html#reservar",
+      "icons": [{ "src": "icons/shortcut-form.png", "sizes": "96x96" }]
+    }
+  ]
+}
